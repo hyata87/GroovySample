@@ -8,7 +8,11 @@ import android.view.View
 import android.widget.Toast
 import com.arasthel.swissknife.SwissKnife
 import com.arasthel.swissknife.annotations.OnClick
+import groovy.transform.CompileStatic
+import groovy.transform.TypeChecked
 
+@CompileStatic
+@TypeChecked
 public class MyActivity extends Activity {
 
     protected void onCreate(Bundle savedInstanceState) {

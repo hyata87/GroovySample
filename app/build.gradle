@@ -3,7 +3,7 @@ apply plugin: 'me.champeau.gradle.groovy-android'
 
 android {
     compileSdkVersion 21
-    buildToolsVersion "21.0.1"
+    buildToolsVersion "21.1.0"
 
     defaultConfig {
         applicationId "info.gravitypianist.groovysample"
@@ -18,10 +18,14 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/groovy-release-info.properties'
+    }
 }
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'org.codehaus.groovy:groovy:2.4.0-beta-3:grooid'
-    compile 'com.arasthel:swissknife:1.1.0'
+    compile 'com.arasthel:swissknife:1.1.4'
 }
